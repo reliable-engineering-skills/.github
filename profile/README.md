@@ -32,4 +32,4 @@ for r in reliable-software-engineering rse-task-packs rse-refactoring rse-securi
 
 Codex: clone the same four repositories into `~/.codex/skills/`. Update later with `git pull` in each folder.
 
-All repositories are MIT-licensed and tested on Linux, Windows and macOS. Current version: 3.0.0.
+All repositories are MIT-licensed and tested on Linux, Windows and macOS. Current release: 3.1.1 (core and task packs; refactoring and security review unchanged at 3.0.0).
