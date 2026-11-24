@@ -1,0 +1,27 @@
+name: Proposal or eval case
+description: Suggest a rule change, a new skill behavior or a new eval case.
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Skill-content changes are merged only when they beat the current release in the behavioral evals, so a
+        concrete case (a prompt, a fixture and what a good result looks like) makes a proposal much easier to accept.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What goes wrong today, ideally with an example.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Eval case (optional)
+      description: Prompt, files, and the checks a good result must pass.

@@ -32,5 +32,6 @@ for r in reliable-software-engineering rse-task-packs rse-refactoring rse-securi
 ```
 
 Codex: clone the same five repositories into `~/.codex/skills/`. Update later with `git pull` in each folder.
+To install exactly the current release instead of `main`, see [Pin a release](https://github.com/reliable-engineering-skills/reliable-software-engineering#pin-a-release).
 
 All repositories are MIT-licensed and tested on Linux, Windows and macOS. Current release: 3.3.0, in which `rse-debugging` sees the failing test fail before it fixes the code (task packs 3.1.1; refactoring and security review 3.0.0).

@@ -1,0 +1,59 @@
+name: Skill behavior
+description: An agent followed a skill and did the wrong thing, or ignored a skill it should have used.
+labels: ["skill-behavior"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - reliable-software-engineering
+        - rse-debugging
+        - rse-refactoring
+        - rse-security-review
+        - rse-task-packs
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      description: The `version` in the skill's SKILL.md frontmatter.
+      placeholder: "3.3.0"
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and model
+      placeholder: "Claude Code 2.x with Sonnet, Codex CLI, ..."
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Task or prompt
+      description: The smallest request that shows the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What the skill says should happen, with the section if you know it.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What the agent did. A transcript excerpt or diff helps.
+    validations:
+      required: true
+  - type: checkboxes
+    id: hygiene
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed secrets, tokens and personal data from everything above.
+          required: true

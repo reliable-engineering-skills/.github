@@ -1,0 +1,33 @@
+name: Tooling bug
+description: A bug in a shipped script, such as the skill linter, the task-pack validator, the check recorder or the eval runner.
+labels: ["tooling"]
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Script and version
+      placeholder: "suite/evals/run_evals.py from reliable-software-engineering 3.3.0"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: The full error or the wrong result.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Windows 11, Python 3.12"
+    validations:
+      required: true
